@@ -1,42 +1,72 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Simple Tic-Tac-Toe Styling - All styles in one file */
+
+/* Center the entire game on the page */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Title */
+.app h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Game Status */
+.game-status {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.game-status h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
 }
 
-.card {
-  padding: 2em;
+/* Board - 3x3 Grid */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Cell - Individual Square */
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+/* Cell Colors */
+.cell-x {
+  color: blue;
+}
+
+.cell-o {
+  color: red;
+}
+
+/* Restart Button */
+.restart-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
 }
